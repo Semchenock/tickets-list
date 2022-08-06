@@ -1,0 +1,139 @@
+.card {
+  background-color: white;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  margin: 0 2rem 2rem 2rem;
+  display: flex;
+}
+.buy {
+  border-right: 1px solid #e8eaea;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.buy img {
+  height: 3rem;
+  width: 9rem;
+  margin: 2rem 2.5rem 0 2.5rem;
+}
+.buy button {
+  border-radius: 0.5rem;
+  background-color: #ff6d00;
+  color: white;
+  width: 10rem;
+  margin: 0.7rem auto 2rem auto;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+.buy button:hover {
+  background-color: #ff8124;
+}
+.info {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+.departure,
+.arrival {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 2rem;
+}
+.arrival {
+  align-items: flex-end;
+}
+.time {
+  font-size: 3rem;
+}
+.place {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.date {
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+.transfers {
+  flex-grow: 1;
+  opacity: 0.3;
+  max-width: 25rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.transfers span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.transferDecoration {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.transferDecoration img {
+  width: 1.7rem;
+}
+.transferDecoration hr {
+  height: 1px;
+  border: none;
+  background-color: black;
+  width: 100%;
+}
+@media (max-width: 850px) {
+  .card {
+    margin: 0 1rem 1rem 1rem;
+  }
+  .buy img {
+    height: 2.5rem;
+    width: 7.5rem;
+    margin: 1rem 1rem 0 1rem;
+  }
+  .buy button {
+    width: 8rem;
+    font-size: 1.2rem;
+    padding: 0.8rem 0;
+  }
+  .departure,
+  .arrival {
+    margin: 1rem 0.5rem;
+  }
+  .transfers {
+    max-width: 10rem;
+  }
+  .place {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .buy img {
+    height: 1rem;
+    width: 3rem;
+  }
+  .buy button {
+    width: 4rem;
+    font-size: 0.6rem;
+    padding: 0.3rem 0;
+  }
+  .time {
+    font-size: 2rem;
+  }
+  .place {
+    font-size: 0.6rem;
+  }
+  .date {
+    font-size: 0.6rem;
+  }
+
+  .transfers span {
+    font-size: 0.6rem;
+  }
+  .transferDecoration img {
+    width: 1rem;
+  }
+}

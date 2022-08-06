@@ -1,0 +1,17 @@
+.container {
+  width: 80%;
+  margin: auto;
+  margin-top: 5rem;
+  display: flex;
+}
+@media (max-width: 1500px) {
+  .container {
+    width: 90%;
+    flex-direction: column;
+  }
+}
+@media (max-width: 950px) {
+  .container {
+    width: 100%;
+  }
+}
