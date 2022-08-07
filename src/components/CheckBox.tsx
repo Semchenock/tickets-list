@@ -3,6 +3,7 @@ import sklonenie from "../hooks/sklonenie";
 import { useAppDispatch } from "../hooks/use-store";
 import Filter from "../models/filter";
 import { ticketsActions } from "../store/tickets";
+
 const CheckBox: React.FC<{ filter: Filter }> = (props) => {
   const dispatch = useAppDispatch();
   const amount = props.filter.transfers;

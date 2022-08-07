@@ -11,7 +11,7 @@ const Transfers = () => {
   };
   return (
     <form>
-      <h2>КОЛИЧЕСТВО ПЕРЕСАДОК</h2>
+      <h2 className={classes.header}>КОЛИЧЕСТВО ПЕРЕСАДОК</h2>
       <div className={classes.checkBox}>
         <input
           type="checkbox"

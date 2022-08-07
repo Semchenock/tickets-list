@@ -9,20 +9,20 @@ const Currency = () => {
   };
   const RUBStyle =
     shownCurrency === "RUB"
-      ? `${classes.active} ${classes.radioButton}`
-      : classes.radioButton;
+      ? `${classes.button_active} ${classes.button}`
+      : classes.button;
   const USDStyle =
     shownCurrency === "USD"
-      ? `${classes.active} ${classes.radioButton}`
-      : classes.radioButton;
+      ? `${classes.button_active} ${classes.button}`
+      : classes.button;
   const EURStyle =
     shownCurrency === "EUR"
-      ? `${classes.active} ${classes.radioButton}`
-      : classes.radioButton;
+      ? `${classes.button_active} ${classes.button}`
+      : classes.button;
 
   return (
     <>
-      <h2>ВАЛЮТА</h2>
+      <h2 className={classes.header}>ВАЛЮТА</h2>
       <div className={classes.radio}>
         <button
           className={RUBStyle}

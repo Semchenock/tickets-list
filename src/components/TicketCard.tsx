@@ -54,28 +54,32 @@ const TicketCard: React.FC<{ data: Ticket }> = (props) => {
         ])}`;
   const departureDate = formatDate(ticket.departure_date);
   const arrivalDate = formatDate(ticket.arrival_date);
+  const logoStyle = `${classes.logo} ${classes.buy__logo}`;
+  const buttonStyle = `${classes.button} ${classes.buy__button}`;
+  const locationStyle = `${classes.location} ${classes.info__location}`;
+  const transfersStyle = `${classes.transfers} ${classes.info__transfers}`;
   return (
     <li key={Math.random()} className={classes.card}>
       <div className={classes.buy}>
-        <img src={carrier} alt="TK" />
-        <button>Купить за {priceString}</button>
+        <img src={carrier} alt="TK" className={logoStyle} />
+        <button className={buttonStyle}>Купить за {priceString}</button>
       </div>
       <div className={classes.info}>
-        <div className={classes.departure}>
+        <div className={locationStyle}>
           <span className={classes.time}>{ticket.departure_time}</span>
           <span className={classes.place}>
             {ticket.origin}, {ticket.origin_name}
           </span>
           <span className={classes.date}>{departureDate}</span>
         </div>
-        <div className={classes.transfers}>
-          <span>{transfers}</span>
-          <div className={classes.transferDecoration}>
-            <hr />
-            <img src={plane} alt="plane" />
+        <div className={transfersStyle}>
+          <span className={classes.label}>{transfers}</span>
+          <div className={classes.arrow}>
+            <hr className={classes.line} />
+            <img src={plane} alt="plane" className={classes.plane} />
           </div>
         </div>
-        <div className={classes.arrival}>
+        <div className={locationStyle + " " + classes.location_align_right}>
           <span className={classes.time}>{ticket.arrival_time}</span>
           <span className={classes.place}>
             {ticket.destination_name}, {ticket.destination}

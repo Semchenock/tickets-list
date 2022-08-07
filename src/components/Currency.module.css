@@ -1,16 +1,24 @@
+.header {
+  margin: 1.2rem 1.2rem 0.7rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
 .radio {
   display: flex;
   justify-content: space-around;
   margin: 0 1.2rem 2rem 1.2rem;
 }
-.radioButton {
+.button {
   flex-grow: 1;
   padding: 0.8rem 0;
   border: 1px solid #e8eaea;
+  background-color: white;
   color: #2196f3;
 }
 
-.radioButton:last-child {
+.button:last-child {
   border: 1px solid #e8eaea;
   -moz-border-radius-topright: 0.8rem;
   -webkit-border-top-right-radius: 0.8rem;
@@ -19,7 +27,7 @@
   -webkit-border-bottom-right-radius: 0.8rem;
   border-bottom-right-radius: 0.8rem;
 }
-.radioButton:first-child {
+.button:first-child {
   border: 1px solid #e8eaea;
   -moz-border-radius-topleft: 0.8rem;
   -webkit-border-top-left-radius: 0.8rem;
@@ -28,13 +36,13 @@
   -webkit-border-bottom-left-radius: 0.8rem;
   border-bottom-left-radius: 0.8rem;
 }
-.radioButton:hover {
+.button:hover {
   background-color: #f2fcff;
   border: 1px solid #2196f3;
   color: #2196f3;
 }
-.active,
-.active:hover {
+.button_active,
+.button_active:hover {
   color: white;
   background-color: #2196f3;
   border: 1px solid #2196f3;

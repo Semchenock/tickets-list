@@ -14,8 +14,6 @@ code {
     monospace;
 }
 button {
-  background: none;
-  border: none;
   cursor: pointer;
 }
 ul {
