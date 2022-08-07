@@ -41,8 +41,7 @@
   border: 1px solid #2196f3;
   color: #2196f3;
 }
-.button_active,
-.button_active:hover {
+.button:disabled {
   color: white;
   background-color: #2196f3;
   border: 1px solid #2196f3;

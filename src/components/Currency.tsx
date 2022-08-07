@@ -7,38 +7,28 @@ const Currency = () => {
   const changeCurrencyHandler = (currency: string) => {
     dispatch(ticketsActions.changeShownCurrency(currency));
   };
-  const RUBStyle =
-    shownCurrency === "RUB"
-      ? `${classes.button_active} ${classes.button}`
-      : classes.button;
-  const USDStyle =
-    shownCurrency === "USD"
-      ? `${classes.button_active} ${classes.button}`
-      : classes.button;
-  const EURStyle =
-    shownCurrency === "EUR"
-      ? `${classes.button_active} ${classes.button}`
-      : classes.button;
-
   return (
     <>
       <h2 className={classes.header}>ВАЛЮТА</h2>
       <div className={classes.radio}>
         <button
-          className={RUBStyle}
+          className={classes.button}
           onClick={changeCurrencyHandler.bind(null, "RUB")}
+          disabled={shownCurrency === "RUB"}
         >
           RUB
         </button>
         <button
-          className={USDStyle}
+          className={classes.button}
           onClick={changeCurrencyHandler.bind(null, "USD")}
+          disabled={shownCurrency === "USD"}
         >
           USD
         </button>
         <button
-          className={EURStyle}
+          className={classes.button}
           onClick={changeCurrencyHandler.bind(null, "EUR")}
+          disabled={shownCurrency === "EUR"}
         >
           EUR
         </button>
