@@ -44,6 +44,7 @@ const TicketCard: React.FC<{ data: Ticket }> = (props) => {
     default:
       priceString = `${ticket.price.toLocaleString()} ₽`;
   }
+
   const transfers =
     ticket.stops === 0
       ? "БЕЗ ПЕРЕСАДОК"
@@ -52,12 +53,15 @@ const TicketCard: React.FC<{ data: Ticket }> = (props) => {
           "ПЕРЕСАДКИ",
           "ПЕРЕСАДОК",
         ])}`;
+
   const departureDate = formatDate(ticket.departure_date);
   const arrivalDate = formatDate(ticket.arrival_date);
+
   const logoStyle = `${classes.logo} ${classes.buy__logo}`;
   const buttonStyle = `${classes.button} ${classes.buy__button}`;
   const locationStyle = `${classes.location} ${classes.info__location}`;
   const transfersStyle = `${classes.transfers} ${classes.info__transfers}`;
+
   return (
     <li key={Math.random()} className={classes.card}>
       <div className={classes.buy}>

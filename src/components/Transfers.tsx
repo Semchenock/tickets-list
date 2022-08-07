@@ -2,6 +2,7 @@ import { ticketsActions } from "../store/tickets";
 import { useAppSelector, useAppDispatch } from "../hooks/use-store";
 import CheckBox from "./CheckBox";
 import classes from "./Transfers.module.css";
+
 const Transfers = () => {
   const dispatch = useAppDispatch();
   const allFilters = useAppSelector((state) => state.tickets.allFilters);
@@ -28,4 +29,5 @@ const Transfers = () => {
     </form>
   );
 };
+
 export default Transfers;

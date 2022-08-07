@@ -1,6 +1,7 @@
 import TicketCard from "./TicketCard";
 import { useAppSelector } from "../hooks/use-store";
 import classes from "./TicketsList.module.css";
+
 const TicketsList = () => {
   const allTickets = useAppSelector((state) => state.tickets.allTickets);
   const allFilters = useAppSelector((state) => state.tickets.allFilters);
@@ -12,6 +13,7 @@ const TicketsList = () => {
     .sort((a, b) => {
       return a.price > b.price ? 1 : b.price > a.price ? -1 : 0;
     });
+
   return (
     <ul className={classes.ticketsList}>
       {shownTickets.map((ticket) => {
@@ -20,4 +22,5 @@ const TicketsList = () => {
     </ul>
   );
 };
+
 export default TicketsList;

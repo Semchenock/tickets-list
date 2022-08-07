@@ -1,7 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-// import type { RootState } from "./index";
 import tickets from "../assets/json/tickets.json";
-// import Ticket from "../models/ticket";
 
 const allTickets = tickets.tickets.map((ticket) => {
   return { ...ticket, id: Math.random() };
@@ -14,6 +12,7 @@ const allFilters = Array.from(new Set(allTransfers))
   .map((transfers) => {
     return { transfers, checked: true };
   });
+
 const initialState = {
   allTickets,
   allFilters,
@@ -49,6 +48,6 @@ const ticketsSlice = createSlice({
     },
   },
 });
+
 export const ticketsActions = ticketsSlice.actions;
-// export const selectAllTodos = (state: RootState) => state.tickets.allTickets;
 export default ticketsSlice.reducer;
